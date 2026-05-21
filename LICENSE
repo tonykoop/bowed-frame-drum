@@ -1,0 +1,4 @@
+This project is dual-licensed:
+- Hardware designs (CAD, DXF, STEP, BOM, fabrication plans): CERN-OHL-W v2.0 — see LICENSE-HARDWARE.md
+- Documentation and media (markdown, images, photos, diagrams): CC BY 4.0 — see LICENSE-DOCS.md
+SPDX-License-Identifier: CERN-OHL-W-2.0 AND CC-BY-4.0
