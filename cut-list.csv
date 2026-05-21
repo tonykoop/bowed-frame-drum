@@ -1,0 +1,8 @@
+# SPDX-License-Identifier: CERN-OHL-W-2.0
+part,qty,blank_length_mm,blank_width_mm,material,thickness_mm,process,nesting_notes
+frame-ring,1,1414.7,90.0,CR steel ASTM A1008,1.0,slip-roll + butt-TIG weld,largest blank; set sheet height; 5mm edge margin
+rim-strip-top,1,1414.7,12.0,CR steel ASTM A1008,1.0,slip-roll alongside frame + TIG weld to frame top edge,nest below frame ring on same sheet
+rim-strip-bottom,1,1414.7,12.0,CR steel ASTM A1008,1.0,slip-roll alongside frame + TIG weld to frame bottom edge,nest below rim-strip-top
+tone-bar,1,400.0,25.0,CR steel ASTM A1008,1.0,laser or plasma cut flat (no forming),nest in remaining space after frame blanks
+mount-bracket,2,30.0,25.0,CR steel ASTM A1008,1.0,laser cut + 90 deg brake bend,nest 2 pieces together; flip one for mirror layout
+wheel-arm,1,80.0,15.0,CR steel ASTM A1008,1.0,laser cut + 2x 45 deg brake bends,nest with mount brackets; small part

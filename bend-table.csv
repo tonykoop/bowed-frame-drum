@@ -1,0 +1,5 @@
+# SPDX-License-Identifier: CERN-OHL-W-2.0
+feature_id,part,angle_deg,inside_radius_mm,k_factor,material_thickness_mm,bend_allowance_mm,sequence,notes
+B01,mount-bracket,90,1.5,0.44,1.0,3.21,1,L-bracket long leg to short leg; brake press; single hit
+B02,wheel-arm-bend-1,45,1.5,0.44,1.0,1.60,1,first offset bend; down 45 deg at 20mm from pivot end
+B03,wheel-arm-bend-2,45,1.5,0.44,1.0,1.60,2,return bend 45 deg at 50mm; restores arm parallel for pivot mount

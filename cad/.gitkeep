@@ -1,0 +1,4 @@
+# SolidWorks parts and assemblies go here.
+# See solidworks-plan.md for feature tree and global variables.
+# Files: frame-ring.sldprt, tone-bar.sldprt, tone-bar-mount.sldprt,
+#        wheel-arm.sldprt, bowed-frame-drum.sldasm
