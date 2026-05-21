@@ -1,0 +1,15 @@
+# SPDX-License-Identifier: CERN-OHL-W-2.0
+supplier,part,sku,url,min_qty,notes
+Online Metals,1.0mm CR steel sheet ASTM A1008,,https://www.onlinemetals.com,1 sheet,choose 1500x500 or larger; specify 20ga CR
+McMaster-Carr,M4 x 30mm cap screw 18-8 SS,92196A102,https://www.mcmaster.com,25 pack,stainless preferred for rust resistance
+McMaster-Carr,M4 weld nut standard,90594A009,https://www.mcmaster.com,10 pack,weld to frame exterior
+McMaster-Carr,M3 blind rivet aluminum,97259A115,https://www.mcmaster.com,50 pack,bracket to frame rivets
+McMaster-Carr,M5 stainless bolt 30mm,91287A198,https://www.mcmaster.com,10 pack,wheel arm pivot
+McMaster-Carr,Neoprene grommet 14mm OD 6mm ID,9325K15,https://www.mcmaster.com,10 pack,tone bar suspension
+McMaster-Carr,PTFE washer M5,98025A031,https://www.mcmaster.com,25 pack,wheel pivot friction
+Remo,Skyndeep 18in frame drum head,,https://www.remo.com,1,model FD-0018-71 or equivalent; weatherproof synthetic
+Guitar Center,Remo 18in head alternate,,https://www.guitarcenter.com,1,if Remo direct out of stock
+Amazon,Violin cake rosin,,https://www.amazon.com,1 block,any standard violin rosin brand; Pirastro or Hill preferred
+Home Depot,Rust-Oleum matte black 2X spray,,https://www.homedepot.com,1 can,item 267736
+Home Depot,Rust-Oleum self-etching primer,,https://www.homedepot.com,1 can,item 249322
+Airgas / Miller,ER70S-6 TIG wire 1/16,,https://www.airgas.com,0.5 kg spool,standard mild steel TIG filler
