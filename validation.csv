@@ -1,0 +1,15 @@
+# SPDX-License-Identifier: CERN-OHL-W-2.0
+target_metric,predicted,measured,units,pass_fail,tolerance,notes
+head_fundamental_hz,130.0,,Hz,pending,±15 Hz,C3 = 130.81 Hz; Bessel mode f01 with T_head derived from target
+head_overtone_f11_hz,219.3,,Hz,pending,±20 Hz,Bessel mode f11; ratio f11/f01 = alpha_11/alpha_01 = 1.593
+tone_bar_mode1_hz,257.4,,Hz,pending,±13 Hz,Euler-Bernoulli free-free mode 1 for 400x25x1mm bar (~C4)
+tone_bar_mode2_hz,709.8,,Hz,pending,informational,free-free mode 2; not targeted for sympathetic coupling
+sympathetic_coupling_head_f11_vs_bar_mode1_pct,17.4,,pct,pending,<25% audible,f_bar1=257.4 vs head f11=219.3; delta=17.4%; audible but not locked
+head_surface_tension_N_per_m,194.9,,N/m,pending,informational,derived from T_head solve for f01=130Hz given sigma=0.35 kg/m2
+frame_out_of_round_mm,,, mm,pending,<1.0 mm,measured at 4 points 90 deg apart with calipers after welding
+rim_strip_flush_mm,,,mm,pending,<0.5 mm gap,feeler gauge check after welding
+head_hold_under_playing_force,,,pass/fail,pending,head stays seated,qualitative: no head detachment after 30 min playing test
+tone_bar_sympathetic_ring,,,pass/fail,pending,audible at 1m,subjective: strike head center; listen for shimmer ring from bar
+bowing_drone_sustain_sec,,,seconds,pending,>3s,minimum sustained drone duration with consistent bow speed
+total_mass_kg,0.91,,kg,pending,<1.5 kg,estimated: frame 700g + head 80g + hardware 130g
+ergonomic_grip_depth_mm,90,,mm,pending,80-110 mm,frame depth sets grip; measured at frame edge
