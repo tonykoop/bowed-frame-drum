@@ -1,0 +1,26 @@
+# SPDX-License-Identifier: CERN-OHL-W-2.0
+part,qty,material,thickness_gauge,supplier,cost_usd,lead_time_days,notes
+CR steel sheet 1500x500mm,1,ASTM A1008 cold-rolled steel,1.0mm / 20ga,Online Metals,22.00,3,yields frame + rim strips + tone bar + brackets + wheel arm
+Frame ring blank cut,1,CR steel,1.0mm,—,0,0,from sheet above; 1414.7 x 90mm
+Rim strip top,1,CR steel,1.0mm,—,0,0,1414.7 x 12mm; from same sheet
+Rim strip bottom,1,CR steel,1.0mm,—,0,0,1414.7 x 12mm; from same sheet
+Tone bar,1,CR steel,1.0mm,—,0,0,400 x 25mm flat; laser cut
+Mount bracket,2,CR steel,1.0mm,—,0,0,30 x 25mm; laser cut + brake bent
+Wheel arm,1,CR steel,1.0mm,—,0,0,80 x 15mm; laser cut + 2x brake bends
+Brass wheel 50mm OD,1,brass,8mm wide,McMaster-Carr 8972K61 or equiv,14.50,2,rosined bowing wheel; optional
+ER70S-6 TIG filler 1/16",0.5,kg,steel TIG wire,Airgas / Miller,8.00,1,frame seam + rim strip welds
+M4 x 30mm cap screw,6,steel zinc-plated,,McMaster-Carr,0.90,2,head tension screws
+M4 weld nut,6,steel,,McMaster-Carr,1.20,2,weld to frame OD
+M3 x 6mm blind rivet,4,aluminum,,Home Depot,0.80,1,bracket rivets; 2 per bracket
+M3 x 20mm cap screw,2,steel,,McMaster-Carr,0.60,2,tone bar end retention
+M3 hex nut jam,2,steel,,McMaster-Carr,0.30,1,tone bar jam nut
+M5 x 30mm bolt,1,stainless,,McMaster-Carr,0.80,2,wheel arm pivot
+M5 thumb nut,1,steel,,McMaster-Carr,1.20,2,wheel arm tension adj
+M5 x 12mm bolt,1,stainless,,McMaster-Carr,0.60,2,brass wheel pivot
+PTFE washer M5,4,PTFE,,McMaster-Carr,1.40,2,wheel pivot friction reduction
+Neoprene grommet 14mm OD 6mm ID,2,neoprene,,McMaster-Carr 9325K15 or equiv,2.60,2,tone bar suspension; vibration isolation
+Drum head 18in,1,Remo Skyndeep or goatskin,,Guitar Center / Remo,24.00,1,460mm OD; 18in standard frame drum head
+Tension wrap-ring 430mm OD,1,aluminum 1.5mm,1.5mm,fabricated from 1.0mm scrap or bought hoop ring,5.00,3,press over head to lock; 12mm wide
+Cake rosin,1,violin rosin,,Amazon / music store,8.00,2,for rosined bowing wheel
+Matte black spray paint,1,Rust-Oleum 2x,—,Home Depot,8.00,1,finish coat; optional
+Self-etching primer spray,1,Rust-Oleum,—,Home Depot,7.00,1,adhesion under topcoat; optional

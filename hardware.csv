@@ -1,0 +1,13 @@
+# SPDX-License-Identifier: CERN-OHL-W-2.0
+item,qty,spec,function,material,supplier
+M4 x 30mm cap screw,6,ISO 4762 M4×30,head tension adjustment,18-8 stainless steel,McMaster-Carr
+M4 weld nut,6,DIN 929 M4,captive nut on frame OD for tension screws,steel zinc,McMaster-Carr
+M3 x 6mm blind rivet,4,DIN 7337 M3,bracket-to-frame attachment,aluminum,McMaster-Carr
+M3 x 20mm cap screw,2,ISO 4762 M3×20,tone bar end retention,steel,McMaster-Carr
+M3 hex jam nut,2,ISO 4035 M3,tone bar jam nut against grommet,steel,McMaster-Carr
+M5 x 30mm bolt,1,ISO 4017 M5×30,wheel arm pivot bolt through frame rim,A2 stainless,McMaster-Carr
+M5 thumb nut,1,knurled M5,wheel arm tension adjustment (hand-tighten),steel zinc,McMaster-Carr
+M5 x 12mm bolt,1,ISO 4017 M5×12,brass wheel pivot on arm,A2 stainless,McMaster-Carr
+PTFE washer M5,4,ø10×1mm PTFE,low-friction wheel pivot spacers,PTFE,McMaster-Carr
+Neoprene grommet 14mm OD 6mm ID,2,standard hardware,tone bar vibration isolation,neoprene,McMaster-Carr
+Large washer M5,2,ø20mm washer,wheel arm pivot bearing surface,steel,any hardware store
