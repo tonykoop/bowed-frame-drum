@@ -1,0 +1,47 @@
+# SPDX-License-Identifier: CERN-OHL-W-2.0
+name,value,unit,source,confidence
+frame_od,450,mm,design intent (bodhran scale),high
+frame_id,448,mm,frame_od - 2*wall_thickness,high
+frame_depth,90,mm,design intent,high
+wall_thickness,1.0,mm,material spec ASTM A1008 CR,high
+head_playing_od,430,mm,frame_id - 18mm head-wrap clearance,high
+rim_strip_width,12,mm,design intent (bearing + stiffener),high
+rim_strip_thickness,1.0,mm,same sheet stock as frame,high
+frame_blank_length,1414.7,mm,pi * frame_od,high
+frame_blank_height,90,mm,same as frame_depth,high
+tension_screw_qty,6,count,design intent (60-deg spacing),high
+tension_screw_size,M4,mm,design intent,high
+tension_screw_length,30,mm,design intent,high
+weld_nut_size,M4,,design intent,high
+tone_bar_length,400,mm,design intent (fits inside 430mm ID with clearance),high
+tone_bar_width,25,mm,design intent,high
+tone_bar_thickness,1.0,mm,same sheet stock,high
+tone_bar_material,CR steel ASTM A1008,,same stock as frame,high
+grommet_qty,2,count,one per mount bracket,high
+grommet_id,6,mm,slip-fit over 5mm boss on bracket,med
+grommet_od,14,mm,standard hardware-store neoprene,med
+mount_bracket_blank_l,30,mm,design intent,high
+mount_bracket_blank_w,25,mm,tone_bar_width,high
+mount_bracket_thickness,1.0,mm,same sheet stock,high
+mount_bracket_qty,2,count,one per end of tone bar,high
+mount_bracket_spacing,300,mm,center-to-center (50mm from each bar end),high
+rosined_wheel_od,50,mm,design intent,med
+rosined_wheel_width,8,mm,design intent,med
+rosined_wheel_material,brass,,chosen for low density, good rosin adhesion,med
+rosined_wheel_pivot,M5 stainless,,design intent,med
+wheel_arm_blank_l,80,mm,design intent,med
+wheel_arm_blank_w,15,mm,design intent,med
+wheel_arm_thickness,1.0,mm,same sheet stock,high
+wheel_arm_bend_1_angle,45,deg,design intent,med
+wheel_arm_bend_2_angle,45,deg,design intent (return offset),med
+head_target_fundamental,130,Hz,C3 = 130.81 Hz,high
+head_target_overtone,220,Hz,A3 = 220.00 Hz,med
+tone_bar_target_mode1,260,Hz,C4 = 261.63 Hz,med
+head_tension_approx,60,N,distributed over 6 screws,med
+head_material,goatskin or Remo Skyndeep,,bought component,high
+steel_density,7850,kg/m3,ASTM A1008 CR,high
+steel_elastic_modulus,200,GPa,ASTM A1008 CR,high
+steel_poisson,0.29,,ASTM A1008 CR,high
+k_factor,0.44,,standard for 1mm CR steel sharp bends,med
+inside_bend_radius,1.5,mm,1.5× material thickness guideline,med
+speed_of_sound_air,343,m/s,at 20°C,high
