@@ -1,0 +1,51 @@
+# OS metadata
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editor and swap files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# CAD lock, backup, and temporary export files
+~$*
+*.bak
+*.backup
+*.SLDPRT~
+*.SLDASM~
+*.SLDDRW~
+*.stl.tmp
+*.step.tmp
+*.iges.tmp
+*.f3d.lock
+*.f3z.lock
+*.sldprt.lock
+*.sldasm.lock
+*.slddrw.lock
+.~lock.*
+
+# Python caches and local environments
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+venv/
+
+# Node dependencies and logs
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Large scratch render/export caches
+render-cache/
+renders/tmp/
+exports/tmp/
+_scratch/tmp/
+_scratch/cache/
+_scratch/renders/
+_scratch/exports/
