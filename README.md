@@ -1,6 +1,11 @@
 <!-- SPDX-License-Identifier: CC-BY-4.0 -->
 # Bowed Frame Drum
 
+Status: L2 V5 build-packet candidate - organized for prototype/shop review,
+but not L3/build-ready. CAD/DXF outputs are planned placeholders, acoustic
+targets are unmeasured predictions, and fabrication authority remains
+`pending_measurement` until physical validation and reviewed CAD/DXF exist.
+
 **Family**: Membranophone — frame drum  
 **Archetype**: Irish bodhran  
 **Target tuning**: C3 fundamental (130.8 Hz), A3 first overtone (219 Hz)  
@@ -48,6 +53,8 @@ tuning-notes.md         Bessel physics, screw-to-pitch mapping, bar trimming
 risks.md                safety, manufacturability, acoustic, ergonomic risks
 photo-shotlist.md       20 required shots for capstone deck
 visual-bom-brief.md     brief for visual BOM illustration
+visual-output-register.csv  V5 visual/CAD/DXF authority ledger
+cad/mcp-session-log.md  V5 MCP/external-tool provenance stub
 supplier-rfq.md         quote-ready RFQ text for sheet stock + head
 explorer.html           interactive packet browser (Heifer Zephyr design language)
 agent-record.md         session log: queries, assumptions, unknowns
