@@ -38,7 +38,7 @@ into a hybrid membranophone/bowed instrument.
 ```
 design.md               parametric design + geometry narrative
 parameters.csv          all dimensions with units and confidence
-wolfram-starter.wl      acoustic model: Bessel membrane + Euler-Bernoulli bar modes
+bowed-frame-drum-starter.wl      acoustic model: Bessel membrane + Euler-Bernoulli bar modes
 bom.csv                 full bill of materials
 sourcing.csv            supplier SKUs and URLs
 hardware.csv            fasteners and bought hardware
