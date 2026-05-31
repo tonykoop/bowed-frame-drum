@@ -313,7 +313,7 @@ table.data tr:hover td{background:#F3ECD7}
   <!-- 05 Wolfram Model -->
   <section id="wolfram">
     <h1><span class="eyebrow">Acoustics</span>Wolfram Starter Model</h1>
-    <p>First-order acoustic model covering circular membrane Bessel modes, tone bar Euler-Bernoulli bending modes, sympathetic coupling check, and rosined wheel excitation bandwidth. Source: <code>wolfram-starter.wl</code></p>
+    <p>First-order acoustic model covering circular membrane Bessel modes, tone bar Euler-Bernoulli bending modes, sympathetic coupling check, and rosined wheel excitation bandwidth. Source: <code>bowed-frame-drum-starter.wl</code></p>
 
     <h2>Model Overview</h2>
     <div class="cards">
@@ -326,12 +326,12 @@ table.data tr:hover td{background:#F3ECD7}
     <div class="file open" id="wl-viewer">
       <div class="file-head" onclick="toggleFile('wl-viewer')">
         <span class="icon">▶</span>
-        <span class="file-name">wolfram-starter.wl</span>
+        <span class="file-name">bowed-frame-drum-starter.wl</span>
         <span class="file-type">Wolfram</span>
         <span class="file-desc">Acoustic model source</span>
       </div>
       <div class="file-body">
-        <pre id="wl-code">Loading wolfram-starter.wl…</pre>
+        <pre id="wl-code">Loading bowed-frame-drum-starter.wl…</pre>
       </div>
     </div>
   </section>
@@ -587,7 +587,7 @@ async function init(){
   }
 
   // Wolfram
-  const wlText = await loadFile('wolfram-starter.wl');
+  const wlText = await loadFile('bowed-frame-drum-starter.wl');
   if(wlText){
     document.getElementById('wl-code').textContent = wlText;
   }

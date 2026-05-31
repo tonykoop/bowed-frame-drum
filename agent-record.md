@@ -47,7 +47,7 @@
 | README.md | Overview + repo map |
 | design.md | Parametric design doc |
 | parameters.csv | 47 parameters |
-| wolfram-starter.wl | Acoustic model (168 lines) |
+| bowed-frame-drum-starter.wl | Acoustic model (168 lines) |
 | solidworks-plan.md | SW feature tree + global vars |
 | flat-pattern-checklist.md | DXF naming, layers, nesting |
 | bend-table.csv | 3 bends with allowances |
