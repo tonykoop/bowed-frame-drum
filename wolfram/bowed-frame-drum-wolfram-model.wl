@@ -15,7 +15,7 @@ ClearAll["Global`*"];
 c      = 343.0;   (* speed of sound m/s at 20C *)
 a4     = 440.0;   (* Hz *)
 rho    = 7850.0;  (* kg/m3 CR steel *)
-E      = 200e9;   (* Pa elastic modulus *)
+EYoung = 2.0*^11;   (* Pa elastic modulus (renamed from E: E is Protected = Euler number; was 200e9, invalid WL sci-notation) *)
 nu     = 0.29;    (* Poisson ratio *)
 
 
@@ -95,15 +95,15 @@ barLEstimate = 0.400;   (* m tone bar length *)
 barWEstimate = 0.025;   (* m tone bar width (bending axis) *)
 barHEstimate = 0.001;   (* m tone bar thickness *)
 
-I_bar = barWEstimate * barHEstimate^3 / 12;           (* second moment of area m^4 *)
-A_bar = barWEstimate * barHEstimate;                   (* cross-section area m^2 *)
-kappa_sq = E * I_bar / (rho * A_bar); (* stiffness parameter m^4/s^2 *)
+Ibar = barWEstimate * barHEstimate^3 / 12;           (* second moment of area m^4 (renamed from I_bar: I is ImaginaryI, underscore makes a pattern) *)
+Abar = barWEstimate * barHEstimate;                   (* cross-section area m^2 *)
+kappaSq = EYoung * Ibar / (rho * Abar); (* stiffness parameter m^4/s^2 *)
 
 (* Free-free lambda^2 values for first 4 modes *)
 lambda2 = {22.3733, 61.6728, 120.9034, 199.8594};
 
 barFreqs = Table[
-  N[(lambda2[[n]] / (2 Pi barLEstimate^2)) * Sqrt[kappa_sq]],
+  N[(lambda2[[n]] / (2 Pi barLEstimate^2)) * Sqrt[kappaSq]],
   {n, 1, 4}
 ];
 
@@ -123,17 +123,17 @@ Print["(trim bar shorter to raise pitch; add mass to lower pitch)"];
 
 f01 = membraneFreqs[[1, 5]];
 f11 = membraneFreqs[[2, 5]];
-f_bar1 = barFreqs[[1]];
-f_bar2 = barFreqs[[2]];
+fbar1 = barFreqs[[1]];
+fbar2 = barFreqs[[2]];
 
-coupling01 = Abs[f_bar1 - f01] / f01 * 100;
-coupling11 = Abs[f_bar1 - f11] / f11 * 100;
-coupling01_bar2 = Abs[f_bar2 - f01] / f01 * 100;
+coupling01 = Abs[fbar1 - f01] / f01 * 100;
+coupling11 = Abs[fbar1 - f11] / f11 * 100;
+coupling01bar2 = Abs[fbar2 - f01] / f01 * 100;
 
 Print["\n=== Sympathetic Coupling Check ==="];
-Print["Head f01=", NumberForm[f01, {5,1}], " Hz vs bar mode1=", NumberForm[f_bar1, {5,1}], " Hz → delta=", NumberForm[coupling01, {4,1}], "%"];
-Print["Head f11=", NumberForm[f11, {5,1}], " Hz vs bar mode1=", NumberForm[f_bar1, {5,1}], " Hz → delta=", NumberForm[coupling11, {4,1}], "%"];
-Print["Head f01=", NumberForm[f01, {5,1}], " Hz vs bar mode2=", NumberForm[f_bar2, {5,1}], " Hz → delta=", NumberForm[coupling01_bar2, {4,1}], "%"];
+Print["Head f01=", NumberForm[f01, {5,1}], " Hz vs bar mode1=", NumberForm[fbar1, {5,1}], " Hz → delta=", NumberForm[coupling01, {4,1}], "%"];
+Print["Head f11=", NumberForm[f11, {5,1}], " Hz vs bar mode1=", NumberForm[fbar1, {5,1}], " Hz → delta=", NumberForm[coupling11, {4,1}], "%"];
+Print["Head f01=", NumberForm[f01, {5,1}], " Hz vs bar mode2=", NumberForm[fbar2, {5,1}], " Hz → delta=", NumberForm[coupling01bar2, {4,1}], "%"];
 Print["Coupling threshold: < 5% → strong; 5-15% → audible; > 15% → weak"];
 
 (* ============================================================
@@ -167,7 +167,66 @@ Print["Effective drone range: ", NumberForm[f01 * 0.8, {5,1}], " - ", NumberForm
 Print["\n=== Predicted Values for validation.csv ==="];
 Print["head_fundamental_hz,", NumberForm[f01, {5,1}]];
 Print["head_overtone_f11_hz,", NumberForm[f11, {5,1}]];
-Print["tone_bar_mode1_hz,", NumberForm[f_bar1, {5,1}]];
-Print["tone_bar_mode2_hz,", NumberForm[f_bar2, {5,1}]];
+Print["tone_bar_mode1_hz,", NumberForm[fbar1, {5,1}]];
+Print["tone_bar_mode2_hz,", NumberForm[fbar2, {5,1}]];
 Print["sympathetic_coupling_pct,", NumberForm[coupling11, {4,1}]];
 Print["head_surface_tension_N_per_m,", NumberForm[THeadEstimate, {5,1}]];
+
+(* ============================================================
+   INTERACTIVE — Bowed Frame Drum estimator (EMPIRICAL ESTIMATES)
+   Exposes real model parameters as controls and recomputes the
+   membrane modes, tone-bar bending modes, and sympathetic coupling
+   live via the same first-order physics used above.
+   ============================================================ *)
+
+Manipulate[
+  Module[
+    {Tval, cMem, mFreqs, kappaSq, Ibar, Abar, bFreqs, lam2, bz, f01v, f11v, fb1, cpl},
+    bz = {{0, 1, 2.4048}, {1, 1, 3.8317}, {2, 1, 5.1356}, {0, 2, 5.5201}};
+    (* surface tension implied by the target fundamental f01 *)
+    Tval = sigmaHead (2 Pi headRadius targetF01 / 2.4048)^2;
+    cMem = Sqrt[Tval / sigmaHead];
+    mFreqs = Table[
+      {StringJoin["f", ToString[row[[1]]], ToString[row[[2]]]],
+       N[(row[[3]] / (2 Pi headRadius)) * cMem]},
+      {row, bz}];
+    (* tone-bar free-free bending modes (weak-axis) *)
+    Ibar = barW barH^3 / 12;
+    Abar = barW barH;
+    kappaSq = EYoung Ibar / (rho Abar);
+    lam2 = {22.3733, 61.6728, 120.9034, 199.8594};
+    bFreqs = Table[N[(lam2[[n]] / (2 Pi barL^2)) Sqrt[kappaSq]], {n, 1, 4}];
+    f01v = mFreqs[[1, 2]]; f11v = mFreqs[[2, 2]]; fb1 = bFreqs[[1]];
+    cpl = Abs[fb1 - f11v] / f11v * 100;
+    Column[{
+      Style["Bowed Frame Drum — EMPIRICAL ESTIMATES (not fabrication authority)",
+        Bold, Darker[Red]],
+      Grid[
+        Prepend[
+          Map[{#[[1]], NumberForm[#[[2]], {5, 1}], NearestNote[#[[2]]]} &, mFreqs],
+          {"Membrane mode (EST)", "freq Hz", "nearest note"}],
+        Frame -> All, Alignment -> Left],
+      Grid[
+        Prepend[
+          Table[{StringJoin["bar mode ", ToString[n]],
+                 NumberForm[bFreqs[[n]], {5, 1}], NearestNote[bFreqs[[n]]]}, {n, 1, 4}],
+          {"Tone-bar mode (EST)", "freq Hz", "nearest note"}],
+        Frame -> All, Alignment -> Left],
+      Grid[{
+        {"Implied head tension (EST)", Row[{NumberForm[Tval, {5, 1}], " N/m"}]},
+        {"Membrane wave speed (EST)", Row[{NumberForm[cMem, {5, 1}], " m/s"}]},
+        {"Head f01 vs bar mode1 coupling (EST)", Row[{NumberForm[cpl, {4, 1}], " %"}]},
+        {"Coupling verdict (EST)",
+          Which[cpl < 5, "strong (<5%)", cpl < 15, "audible (5-15%)", True, "weak (>15%)"]}},
+        Frame -> All, Alignment -> Left]
+    }, Spacings -> 1]
+  ],
+  {{headRadius, 0.215, "head radius m — EMPIRICAL ESTIMATE"}, 0.10, 0.35, 0.005},
+  {{sigmaHead, 0.35, "head surface mass kg/m^2 — EMPIRICAL ESTIMATE"}, 0.15, 0.60, 0.01},
+  {{targetF01, 130.0, "target fundamental Hz — EMPIRICAL ESTIMATE"}, 60.0, 220.0, 1.0},
+  {{barL, 0.400, "tone-bar length m — EMPIRICAL ESTIMATE"}, 0.20, 0.60, 0.005},
+  {{barW, 0.025}, ControlType -> None},
+  {{barH, 0.001}, ControlType -> None},
+  ControlPlacement -> Left,
+  SaveDefinitions -> True
+]
