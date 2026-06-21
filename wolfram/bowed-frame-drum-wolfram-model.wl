@@ -179,7 +179,7 @@ Print["head_surface_tension_N_per_m,", NumberForm[THeadEstimate, {5,1}]];
    live via the same first-order physics used above.
    ============================================================ *)
 
-Manipulate[
+bowedFrameDrumExplorer = Manipulate[
   Module[
     {Tval, cMem, mFreqs, kappaSq, Ibar, Abar, bFreqs, lam2, bz, f01v, f11v, fb1, cpl},
     bz = {{0, 1, 2.4048}, {1, 1, 3.8317}, {2, 1, 5.1356}, {0, 2, 5.5201}};
