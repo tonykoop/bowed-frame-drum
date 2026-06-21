@@ -1,0 +1,42 @@
+{
+  "packet_dir": ".",
+  "title": "Bowed Frame Drum — Starter Packet",
+  "instrument": "bowed frame drum",
+  "build_target": "bowed frame drum reference scaffold",
+  "artifact_focus": "percussion instrument starter packet",
+  "generated": "2026-06-21",
+  "readiness": "starter",
+  "release_status": "private / starter scaffold",
+  "fabrication_authority": {
+    "current_status": "starter scaffold — not for fabrication",
+    "generated_images_allowed_as_authority": false,
+    "wolfram_allowed_as_authority": false
+  },
+  "engineering": {
+    "wolfram": [
+      {
+        "source_file": "percussion/bowed-frame-drum/bowed-frame-drum-starter.wl",
+        "cloud_path": "Musical_Instruments/percussion/bowed-frame-drum/bowed-frame-drum-starter.wl",
+        "cloud_url": "https://www.wolframcloud.com/obj/wrfcoin/Musical_Instruments/percussion/bowed-frame-drum/bowed-frame-drum-starter.wl",
+        "permission": "Public-Execute",
+        "kind": "acoustics-starter"
+      },
+      {
+        "source_file": "percussion/bowed-frame-drum/wolfram/bowed-frame-drum-wolfram-model.wl",
+        "cloud_path": "Musical_Instruments/percussion/bowed-frame-drum/bowed-frame-drum-wolfram-model.wl",
+        "cloud_url": "https://www.wolframcloud.com/obj/wrfcoin/Musical_Instruments/percussion/bowed-frame-drum/bowed-frame-drum-wolfram-model.wl",
+        "permission": "Public-Execute",
+        "kind": "geometry-model"
+      }
+    ]
+  },
+  "files_included": [
+    "README.md",
+    "design.md",
+    "bom.csv",
+    "sourcing.csv",
+    "cut-list.csv",
+    "assembly-manual.md",
+    "validation.csv"
+  ]
+}
