@@ -1,0 +1,34 @@
+{
+  "product": "bowed-frame-drum",
+  "pipeline": "studiopipeline:evolution-pipeline",
+  "stage": "0-intake",
+  "master_revision": "rev-A (pre-commit intake, 2026-07-01)",
+  "generated": "2026-07-01",
+  "cad_masters": [
+    {
+      "path": "cad/bowed-frame-drum.scad",
+      "format": "openscad-source",
+      "sha256": "49b67e8979124685d6403cfb49bb805301c27a05e9e0b7eb080d7504441c73cc",
+      "authority": "pending_measurement",
+      "lossy": false,
+      "notes": "Parametric frame-drum envelope (frame ring + head + rim strip + tension field + tone bar + rosined wheel). Tuning-sensitive tone-bar/wheel/tension out of scope."
+    },
+    {
+      "path": "parameters.csv",
+      "format": "parameter-table",
+      "sha256": "0d1d12fdfadbcc3626e6cf1e9334d37dfee6ff22caee456e86e5b9a592aa85e0",
+      "authority": "pending_measurement",
+      "lossy": false,
+      "notes": "Design-intent parameter table; high-confidence dimensions, acoustic targets remain planning surfaces."
+    },
+    {
+      "path": "wolfram/bowed-frame-drum-wolfram-model.wl",
+      "format": "wolfram-source",
+      "sha256": "c38ed079bf7f81718bf82f3194970f62d19513894579217b353f136264906bcb",
+      "authority": "derived_preview",
+      "lossy": false,
+      "notes": "Membrane + tone-bar modal-frequency model; source-only (not executed). L2 evidence."
+    }
+  ],
+  "notes": "OpenSCAD envelope + parameters.csv are the current masters; SolidWorks parts are planned (solidworks-plan.md) but not yet authored, and no STEP export exists. Gate A (Alpha workspace compile) not yet run."
+}
