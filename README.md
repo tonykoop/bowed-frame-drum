@@ -58,8 +58,10 @@ cad/mcp-session-log.md  V5 MCP/external-tool provenance stub
 supplier-rfq.md         quote-ready RFQ text for sheet stock + head
 explorer.html           interactive packet browser (Heifer Zephyr design language)
 agent-record.md         session log: queries, assumptions, unknowns
+wolfram/                bowed-frame-drum-wolfram-model.wl (source-only modal model)
 drawings/               DXF flat patterns (stubs — populate with CAD)
-cad/                    SolidWorks parts + assembly (stubs)
+cad/                    SolidWorks parts + assembly (stubs) + bowed-frame-drum.scad envelope master
+evolution/              StudioPipeline Stage-0 intake (design intent, master manifest, revisions)
 cnc/                    plasma/laser nesting plan (stubs)
 learn-to-play/          bodhran technique stub
 ```
